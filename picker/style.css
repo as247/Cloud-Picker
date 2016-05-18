@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+body {
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+.has-iframe .clouds-picker,
+.picker-loading .clouds-picker {
+  display: none;
+}
+.picker-dialog-content,
+.picker-dialog {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+.picker-dialog-content iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+#cloud-picker {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#cloud-picker button {
+  position: relative;
+  height: 30px;
+  margin-left: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  -moz-user-select: none;
+  background-image: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 0 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#cloud-picker button:focus,
+#cloud-picker button:hover {
+  background: #fafafa;
+  border-color: #999;
+  color: #23282d;
+  outline: 0 !important;
+}
+#cloud-picker button::-moz-focus-inner {
+  border: 0;
+}
+#cloud-picker button:active {
+  background: #eee;
+  border-color: #999;
+  -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+#cloud-picker button.hidden {
+  display: none;
+}
+#cloud-picker button[disabled] {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+#cloud-picker button:first-child {
+  margin-left: 0;
+}
+#cloud-picker button .cloud-icon {
+  height: 20px;
+  position: absolute;
+}
+#cloud-picker button .btn-label {
+  margin-left: 25px;
+  line-height: 20px;
+}
+#cloud-picker button.nci .btn-label {
+  margin-left: 0;
+}
+#cloud-picker button.one_drive .btn-label {
+  margin-left: 30px;
+}
