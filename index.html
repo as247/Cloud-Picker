@@ -1,132 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="utf-8">
-	<title>Cloud Picker</title>
- 	<meta name="description" content="Cloud Picker helps you easily pick content from cloud storage service">
-	<meta name="author" content="As247">
-	<meta name="copyright" content="As247">
-	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
-	<meta name="date" content="2016-05-18T00:00:00+02:00">
-	
+    <title>Cloud Picker</title>
+    <meta name="description" content="Cloud Picker helps you easily pick content from cloud storage service">
+    <meta name="keywords" content="Cloud picker, pick, picker, cloud storage, google drive, one drive, dropbox, box">
+    <meta name="author" content="As247">
+    <meta name="copyright" content="As247">
+    <meta name="date" content="2016-05-18T00:00:00+02:00">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	
+    <meta name="og:image" content="assets/images/image_1.png">
+    <meta name="og:image" content="assets/images/picker.png">
+
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/documenter_style.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-        <script type="text/javascript" src="http://picker.vui360.com/api.js"></script>
-    
-	
-	<style>
-		html, body{background-color:#FFFFFF;color:#383838;}
-		h1,h2,h3,h4,h5,h6{color:#383838;}
-		section table{background-color:#FFFFFF;}
-		::-moz-selection{background:#444444;color:#DDDDDD;}
-		::selection{background:#444444;color:#DDDDDD;}
-		a.brand{background-image:url(assets/images/image_1.png);}
-		a, a:hover, a:active{color:#0000FF;}
-		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
-		div.navbar-inner, .navbar .nav li ul{background:#DDDDDD;color:#222222;}
-		a.btn-navbar{background:#DDDDDD;color:#222222;}
-		.navbar .nav li a{color:#222222;text-shadow:1px 1px 0px #EEEEEE;}
-		.navbar .nav li a:hover, .navbar .nav li.active a{text-shadow:none;}
-		div.navbar-inner ul{}
-		.marketing-byline{color:#FFFFFF;}
-		.navbar .nav > li a{color:#444444;}
-		.navbar .nav > li a:hover, a.btn-navbar:hover{background:#444444;color:#DDDDDD;}
-		.navbar .nav .active > a, .navbar .nav .active > a:hover, a.btn-navbar:active{background-color:#444444;color:#DDDDDD;}
-		.navbar .nav li ul li a:hover{background:#444444;color:#DDDDDD;}
-		.navbar .nav li ul li a:active{background:#444444;color:#DDDDDD;}
-		.btn-primary {
-			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
-			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
-			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
-			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
-			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
-			  background-image: linear-gradient(top, #0088CC, #0044CC);
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
-			  border-color: #0044CC #0044CC #bfbfbf;
-			  color:#FFFFFF;
-		}
-		.btn-primary:hover,
-		.btn-primary:active,
-		.btn-primary.active,
-		.btn-primary.disabled,
-		.btn-primary[disabled] {
-		  background-color: #0044CC;
-		}
-		#documenter_copyright{display:block !important;visibility:visible !important;}
-	</style>
-	
-	
-	
-    </head>
-    
+    <script type="text/javascript" src="http://picker.vui360.com/api.js"></script>
+
+
+    <style>
+        html, body {
+            background-color: #FFFFFF;
+            color: #383838;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #383838;
+        }
+
+        section table {
+            background-color: #FFFFFF;
+        }
+
+        ::-moz-selection {
+            background: #444444;
+            color: #DDDDDD;
+        }
+
+        ::selection {
+            background: #444444;
+            color: #DDDDDD;
+        }
+
+        a.brand {
+            background-image: url(assets/images/image_1.png);
+        }
+
+        a, a:hover, a:active {
+            color: #0000FF;
+        }
+
+        hr {
+            border-top: 1px solid #EBEBEB;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        div.navbar-inner, .navbar .nav li ul {
+            background: #DDDDDD;
+            color: #222222;
+        }
+
+        a.btn-navbar {
+            background: #DDDDDD;
+            color: #222222;
+        }
+
+        .navbar .nav li a {
+            color: #222222;
+            text-shadow: 1px 1px 0px #EEEEEE;
+        }
+
+        .navbar .nav li a:hover, .navbar .nav li.active a {
+            text-shadow: none;
+        }
+
+        div.navbar-inner ul {
+        }
+
+        .marketing-byline {
+            color: #FFFFFF;
+        }
+
+        .navbar .nav > li a {
+            color: #444444;
+        }
+
+        .navbar .nav > li a:hover, a.btn-navbar:hover {
+            background: #444444;
+            color: #DDDDDD;
+        }
+
+        .navbar .nav .active > a, .navbar .nav .active > a:hover, a.btn-navbar:active {
+            background-color: #444444;
+            color: #DDDDDD;
+        }
+
+        .navbar .nav li ul li a:hover {
+            background: #444444;
+            color: #DDDDDD;
+        }
+
+        .navbar .nav li ul li a:active {
+            background: #444444;
+            color: #DDDDDD;
+        }
+
+        .btn-primary {
+            background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+            background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+            background-image: -webkit-gradient(linear, 0 0, 0 0088 CC%, from(#DDDDDD), to(#0044CC));
+            background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+            background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+            background-image: linear-gradient(top, #0088CC, #0044CC);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+            border-color: #0044CC #0044CC #bfbfbf;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary.active,
+        .btn-primary.disabled,
+        .btn-primary[disabled] {
+            background-color: #0044CC;
+        }
+
+        #documenter_copyright {
+            display: block !important;
+            visibility: visible !important;
+        }
+    </style>
+
+
+</head>
+
 <body class="documenter-project-cloud-picker" data-spy="scroll" id="top">
 
 <!-- Documentation Navbar -->
 
 <div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container"> 
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
-			<a class="brand" href="#">Cloud Picker</a>
-			<div class="nav-collapse">
-			<ul class="nav">
-					
-			<li><a href="#usage" title="Usage">Usage</a></li>
-			<li><a href="#example" title="Example">Examples</a></li>
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+            <a class="brand" href="#">Cloud Picker</a>
+            <div class="nav-collapse">
+                <ul class="nav">
 
-			</ul>
-			</div>
-		</div>
-	</div>
+                    <li><a href="#usage" title="Usage">Usage</a></li>
+                    <li><a href="#example" title="Example">Examples</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
 </div> <!-- End of Navbar -->
 
-<!-- Main Container Beginning -->			
-			
+<!-- Main Container Beginning -->
+
 <div class="container" id="documenter_content">
-    
-	<div id="documenter-cover" style="margin: auto; max-width: 500px;">
-	<div class="masthead">
-	    <h1>Cloud Picker</h1>
-	    <p>Cloud Picker helps you easily pick content from cloud storage service</p>
-        <img src="assets/images/picker.png">
-	    <ul class="marketing-byline">
-			<li>created: 03/10/2011</li>
-			<li>latest update: 05/18/2016</li>
-			<li>by: As247</li>
-			
-		</ul>
-	    <p class="download-info">
-			<a href="#usage" class="btn btn-primary btn-large">Get It Now</a> 
-		</p>
-		
-	</div> <!-- masthead -->
-	
-   <div id="intro" style="display: none">
-    <p class="highlight hero-unit"></p>
-   </div> <!-- intro -->
-   
-	</div>
-      
-  <section id="usage">
-	<div class="page-header"><h3>Usage</h3><hr class="notop"></div>
-<p>
-	1. Include javascript</p>
+
+    <div id="documenter-cover" style="margin: auto; max-width: 500px;">
+        <div class="masthead">
+            <h1>Cloud Picker</h1>
+            <p>Cloud Picker helps you easily pick content from cloud storage service</p>
+            <img src="assets/images/picker.png">
+            <ul class="marketing-byline">
+                <li>created: 03/10/2011</li>
+                <li>latest update: 05/18/2016</li>
+                <li>by: As247</li>
+
+            </ul>
+            <p class="download-info">
+                <a href="#usage" class="btn btn-primary btn-large">Get It Now</a>
+            </p>
+
+        </div> <!-- masthead -->
+
+        <div id="intro" style="display: none">
+            <p class="highlight hero-unit"></p>
+        </div> <!-- intro -->
+
+    </div>
+
+    <section id="usage">
+        <div class="page-header"><h3>Usage</h3>
+            <hr class="notop">
+        </div>
+        <p>
+            1. Include javascript</p>
 <pre class="prettyprint lang-html linenums">
-<span class="tag"><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>=&quot;<a class="attribute-value">text/javascript</a>&quot; <span class="attribute-name">src</span>=&quot;<a class="attribute-value" href="view-source:http://picker.vui360.com/api.js">http://picker.vui360.com/api.js</a>&quot;&gt;</span><span>&lt;/<span class="end-tag">script</span>&gt;</span></span></pre>
-<p>
-	2. Create div element where you want to put cloud picker</p>
+<span class="tag"><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>=&quot;<a
+        class="attribute-value">text/javascript</a>&quot; <span class="attribute-name">src</span>=&quot;<a
+        class="attribute-value" href="view-source:http://picker.vui360.com/api.js">http://picker.vui360.com/api.js</a>&quot;&gt;</span><span>&lt;/<span
+        class="end-tag">script</span>&gt;</span></span></pre>
+        <p>
+            2. Create div element where you want to put cloud picker</p>
 <pre class="prettyprint lang-html linenums">
 &lt;div id=&quot;my-picker&quot;&gt;&lt;/div&gt;</pre>
-<p>
-	3. Initialize picker on selected element</p>
+        <p>
+            3. Initialize picker on selected element</p>
 <pre class="prettyprint lang-html linenums" id="line1">
 <span>&lt;script type=&quot;text/javascript&quot;&gt;
 &nbsp;&nbsp;&nbsp; CloudPicker.
@@ -135,11 +213,14 @@
 &nbsp;&nbsp;&nbsp; start(function(){console.log(&#39;start&#39;)}).
 &nbsp;&nbsp;&nbsp; cancel(function(){console.log(&#39;cancelled&#39;)});
 &lt;/script&gt;</span></pre>
-</section>
-<section id="example">
-	<div class="page-header"><h3>Examples</h3><hr class="notop"></div>
-<h4 id="example_show_all_buttons" style="margin-top: 5px">Show all buttons</h4>
-<pre class="prettyprint lang-html linenums" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+    </section>
+    <section id="example">
+        <div class="page-header"><h3>Examples</h3>
+            <hr class="notop">
+        </div>
+        <h4 id="example_show_all_buttons" style="margin-top: 5px">Show all buttons</h4>
+<pre class="prettyprint lang-html linenums"
+     style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: &quot;Courier New&quot;; font-size: 9pt;">
 &lt;script type=&quot;text/javascript&quot;&gt;
 &nbsp;&nbsp;&nbsp; CloudPicker.
 &nbsp;&nbsp;&nbsp; create(&#39;picker&#39;).
@@ -147,36 +228,41 @@
 &nbsp;&nbsp;&nbsp; start(function(){console.log(&#39;start&#39;)}).
 &nbsp;&nbsp;&nbsp; cancel(function(){console.log(&#39;cancelled&#39;)});
 &lt;/script&gt;</pre>
-<p>
-	Result:</p>
-    <div id="picker-all">
-        <script type="text/javascript">
-            function pickerExampleLog(el,message){
-                if(typeof message=='object'){
-                    message=JSON.stringify(message);
+        <p>
+            Result:</p>
+        <div id="picker-all">
+            <script type="text/javascript">
+                function pickerExampleLog(el, message) {
+                    if (typeof message == 'object') {
+                        message = JSON.stringify(message);
+                    }
+                    var div = document.getElementById(el);
+                    div.innerHTML += message + "\n";
                 }
-                var div=document.getElementById(el);
-                div.innerHTML+=message+"\n";
-            }
 
-            CloudPicker.
-            create('picker-all').
-            success(function(link){pickerExampleLog('picker-all-logs',link)}).
-            start(function(message){pickerExampleLog('picker-all-logs','start: '+JSON.stringify(message))}).
-            cancel(function(message){pickerExampleLog('picker-all-logs','cancelled: '+JSON.stringify(message))});
-        </script>
-    </div>
-    Logs:
-    <pre id="picker-all-logs" style="min-height: 100px;max-height: 200px; overflow-y: auto;"></pre>
-<p>
-	&nbsp;</p>
-    <h4 id="example_show_some_buttons">Show selected buttons</h4>
-    <p>We can choose which buttons we want to show, all available buttons are <em><strong>dropbox</strong></em>, o<em><strong>ne_drive</strong></em>, <strong><em>google_drive</em></strong>, and <em><strong>box</strong></em>. Pass button list to second argument.
-    </p>
-    <p>
-        Eg: select box and dropbox buttons
-    </p>
-    <pre class="prettyprint lang-html linenums" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: &quot;Courier New&quot;; font-size: 9pt;">
+                CloudPicker.create('picker-all').success(function (link) {
+                    pickerExampleLog('picker-all-logs', link)
+                }).start(function (message) {
+                    pickerExampleLog('picker-all-logs', 'start: ' + JSON.stringify(message))
+                }).cancel(function (message) {
+                    pickerExampleLog('picker-all-logs', 'cancelled: ' + JSON.stringify(message))
+                });
+            </script>
+        </div>
+        Logs:
+        <pre id="picker-all-logs" style="min-height: 100px;max-height: 200px; overflow-y: auto;"></pre>
+        <p>
+            &nbsp;</p>
+        <h4 id="example_show_some_buttons">Show selected buttons</h4>
+        <p>We can choose which buttons we want to show, all available buttons are <em><strong>dropbox</strong></em>,
+            o<em><strong>ne_drive</strong></em>, <strong><em>google_drive</em></strong>, and
+            <em><strong>box</strong></em>. Pass button list to second argument.
+        </p>
+        <p>
+            Eg: select box and dropbox buttons
+        </p>
+    <pre class="prettyprint lang-html linenums"
+         style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: &quot;Courier New&quot;; font-size: 9pt;">
 &lt;script type=&quot;text/javascript&quot;&gt;
 &nbsp;&nbsp;&nbsp; CloudPicker.
 &nbsp;&nbsp;&nbsp; create(&#39;picker&#39;,&#39;box,dropbox&#39;).
@@ -185,41 +271,43 @@
 &nbsp;&nbsp;&nbsp; cancel(function(){console.log(&#39;cancelled&#39;)});
 &lt;/script&gt;</pre>
 
-    <p>
-        Result:</p>
-    <div id="picker-some">
-        <script type="text/javascript">
-            CloudPicker.
-            create('picker-some','box,dropbox').
-            success(function(link){pickerExampleLog('picker-some-logs',link)}).
-            start(function(message){pickerExampleLog('picker-some-logs','start: '+JSON.stringify(message))}).
-            cancel(function(message){pickerExampleLog('picker-some-logs','cancelled: '+JSON.stringify(message))});
-        </script>
-    </div>
-    Logs:
-    <pre id="picker-some-logs" style="min-height: 100px;max-height: 200px; overflow-y: auto;"></pre>
+        <p>
+            Result:</p>
+        <div id="picker-some">
+            <script type="text/javascript">
+                CloudPicker.create('picker-some', 'box,dropbox').success(function (link) {
+                    pickerExampleLog('picker-some-logs', link)
+                }).start(function (message) {
+                    pickerExampleLog('picker-some-logs', 'start: ' + JSON.stringify(message))
+                }).cancel(function (message) {
+                    pickerExampleLog('picker-some-logs', 'cancelled: ' + JSON.stringify(message))
+                });
+            </script>
+        </div>
+        Logs:
+        <pre id="picker-some-logs" style="min-height: 100px;max-height: 200px; overflow-y: auto;"></pre>
 
-</section>
+    </section>
 
 
+    <hr/>
 
-    <hr />
+    <footer>
+        <p>Copyright <a href="http://picker.vui360.com/">Cloud Picker</a> 2016</p>
+    </footer>
 
-<footer>
-    <p>Copyright <a href="http://picker.vui360.com/">Cloud Picker</a> 2016</p>
-</footer>
-
-</div><!-- /container --> 
+</div><!-- /container -->
 
 <!-- Le javascript
-    ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-<script>document.createElement('section');var duration='500',easing='swing';</script>
-<script src="assets/js/jquery.js"></script> 
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>document.createElement('section');
+var duration = '500', easing = 'swing';</script>
+<script src="assets/js/jquery.js"></script>
 <script src="assets/js/jquery.scrollTo.js"></script>
 <script src="assets/js/jquery.easing.js"></script>
-<script src="assets/js/scripts.js"></script> 
-<script src="assets/js/google-code-prettify/prettify.js"></script> 
-<script src="assets/js/bootstrap-min.js"></script> 
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/bootstrap-min.js"></script>
 </body>
 </html>
